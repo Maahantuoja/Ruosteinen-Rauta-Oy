@@ -1,0 +1,58 @@
+.parallax1 {
+    height: 80vh;
+    /* height: 800px; */
+    background-image: url(../assets/img/unsplash_images/mika-baumeister-c71yQepDEjo-unsplash.jpg);
+    /* background-image: url(../assets/img/unsplash_images/konstantin-evdokimov-JALUvPLUde8-unsplash.jpg); */
+    background-color: black;
+    background-attachment: fixed;
+    /* background-position: bottom; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 10;
+}
+
+.parallax2 {
+    height: 80vh;
+    /* height: 110vh; */
+    background-image: url(../assets/img/unsplash_images/konstantin-evdokimov-JALUvPLUde8-unsplash.jpg);
+    /* background-image: url(../assets/img/unsplash_images/mika-baumeister-c71yQepDEjo-unsplash.jpg); */
+    background-color: black;
+    background-attachment: fixed;
+    background-position: bottom;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 10;
+}
+
+.parallax3 {
+    height: 80vh;
+    background-image: url(../assets/img/unsplash_images/pavel-neznanov-w95Fb7EEcjE-unsplash.jpg);
+    background-color: black;
+    background-attachment: fixed;
+    background-position: top;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 10;
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+    #hero {
+        position: relative;
+    }
+
+    .parallax1 {
+        background-attachment: scroll;
+    }
+
+    .parallax2 {
+        background-attachment: scroll;
+    }
+
+    .parallax3 {
+        background-attachment: scroll;
+    }
+}

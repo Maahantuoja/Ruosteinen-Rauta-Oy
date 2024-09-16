@@ -1,0 +1,632 @@
+<!-- http://omena.winnova.fi/taitaja2022.html -->
+<!-- http://omena.winnova.fi/phpmyadmin/index.php -->
+<!-- http://omena.winnova.fi/~A53105/ruosteinen_rauta_oy -->
+<!-- http://localhost/koulu/Internetohjelmointi/Ruosteinen_Rauta_Oy/ -->
+
+<!-- Settings: word wrap -->
+<!-- password_needs_rehash() -->
+
+<!DOCTYPE html>
+<html lang="fi">
+
+    <head>
+        <title>Ruosteinen Rauta Oy</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initila-scale=1">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <link rel="stylesheet" href="css/body.css">
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/hero.css">
+        <link rel="stylesheet" href="css/meista.css">
+        <link rel="stylesheet" href="css/karuselli.css">
+        <link rel="stylesheet" href="css/palvelut.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/parallax.css">
+    </head>
+
+    <!-- BODY -->
+    <body data-bs-spy="scroll" data-bs-target=".button" data-bs-offset="50">
+        <div class="container-fluid">
+            <!-- HEADER -->
+            <header>
+                <!-- navbar -->
+                <nav class="navbar navbar-expand-sm navbar-light nav-hide">
+
+                    <a class="navbar-brand" href="http://omena.winnova.fi/~A53105/">
+                        <img src="assets/img/logo/Logo dark.png" alt="Logo"> 
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                        
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><b>Etusivu</b></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><b>Esimerkkisivu</b></a>
+                            </li>
+                        </ul>
+
+                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                            Kirjaudu
+                        </button>
+                    </div>
+                </nav>
+
+                <nav class="navbar navbar-expand-lg navbar-light nav-show">
+                    <a class="navbar-brand" href="http://omena.winnova.fi/~A53105/">
+                        <img src="assets/img/logo/Logo dark.png" alt="Logo"> 
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                        
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><b>Etusivu</b></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><b>Esimerkkisivu</b></a>
+                            </li>
+                        </ul>
+
+                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                            Kirjaudu
+                        </button>
+                    </div>
+                </nav>
+
+                <!-- The Modal (sisään kirjautuminen)-->
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Kirjaudu</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <form action="käyttäjät.php" name="käyttäjät" method="post">
+                                    <div class="form-floating mb-3 mt-0">
+                                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="kayttajanimi">
+                                        <label for="email">Email</label>
+                                    </div>
+
+                                    <div class="form-floating mt-3 mb-3">
+                                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="salasana">
+                                        <label for="pwd">Password</label>
+                                    </div>
+
+                                    <div class="form-check mb-3 float-end">
+                                        <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                                        </label>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Hero banner  -->
+            <div class="row" id="hero-row">
+                <div class="col-lg-12">
+                    <div id="hero">
+                        <div class="texture"></div>
+
+                        <video autoplay muted loop preload="auto">
+                            <source src="assets/video/background-video.mp4" type="video/mp4">
+                        </video>
+
+                        <div class="caption">
+                            <h1>Oikein rakentaminen onnistuu hyvillä ratkaisuilla<br> - <br>Tervetuloa asioimaan Ruosteiseen Rautaan!</h1>
+
+                            <a href="#palvelut" class="active"><button type="button" class="btn btn-outline-primary">Lue lisää</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ? Parallax tähän väliin ja herobannerista parallax efekti pois ? -->
+            <!-- <div class="row">
+                <div class="parallax2"></div>
+            </div> -->
+
+            <!-- Meistä -->
+            <div class="row meista">
+                <div class="col-lg-6">
+                    <h3>Meistä</h3>
+                </div>
+
+                <div class="col-lg-6"></div>
+
+                <div class="col-lg-6">
+                    <p>
+                        Ruosteinen Rauta Oy on perustettu 1958. Myymälästämme löydät erittäin laadukkaita rauta ja 
+                        tarvikkeita sekä palveluita kaikkeen rakentamiseen - oli kyse sitten korjaamisesta, remontoimisesta 
+                        tai uuden rakentamisesta suurissa tai pienissä kohteissa. Meillä asiat hoituvat tutulla 
+                        ammattitaitoisella tavalla alusta loppuun ja kokeneet ammattilaiset auttavat sinua löytämään 
+                        parhaat ratkaisut, rakennusmateriaalit tuotteet sekä koneet ja vuokralaitteet. 
+                    </p>
+
+                    <p>
+                        Myymälämme valikoimasta saat kaiken yhdellä kertaa suuriin ja pieniin rakennus-, remontointi- ja 
+                        sisustusprojekteihin ulos ja sisälle. Yrityksemme arvot ovat kestävän kehitys, osaava ja hyvinvoiva 
+                        henkilökunta sekä työturvallisuus. 
+                    </p>
+
+                    <p>
+                        Oikein rakentaminen onnistuu hyvillä ratkaisuilla - Tervetuloa asioimaan Ruosteiseen Rautaan!
+                    </p>
+
+                    <p>
+                        Ruosteinen Rauta on Porin Yrittäjien jäsenyritys. Tutustu Porin Yrittäjien toimintaan: 
+                        <a href="https://www.yrittajat.fi/paikallisyhdistykset/porin-yrittajat/">
+                            www.yrittajat.fi/paikallisyhdistykset/porin-yrittajat/
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-lg-6">
+                    <img src="assets/img/unsplash_images/neonbrand-tKvp2XBx4NE-unsplash.jpg" alt="RR Oy">
+                </div>
+
+                <div class="col-lg-6"></div>
+
+                <div class="col-lg-6">
+                    <h3>Historia</h3>
+                </div>
+
+                <div class="col-lg-6 b">
+                    <img src="assets/img/unsplash_images/neonbrand-60krlMMeWxU-unsplash.jpg">
+                </div>
+
+                <div class="col-lg-6 a">
+                    <p>
+                        Vuonna 1958 avattiin ensimmäisen kerran Ruosteinen Rauta Oy:n myymälä Porin kauppatorille, 
+                        osoitteeseen Pohjoiskauppatori, 28100 Pori. Tässä osoitteessa myymämme toimi aina vuoteen 2020 asti 
+                        palvellen ensimmäisenä rautakauppana Porilaisia. Myymälämme on toiminut vuodesta 2020 alkaen 
+                        osoitteessa Urheilutie 1, 28500 Pori, jolloin avasimme supermyymälän - joka on yksi pohjoismaiden 
+                        suurimpia rauta ja metallialan myymälöitä. Vuonna 2020 laajensimme palveluihimme myös kone ja 
+                        laitteistovuokrauksen kaikkeen rakentamiseen. 
+                    </p>
+
+                    <p>
+                        Yrityksen perustaja Rauno Rauta on palvellut asiakkaita vuodesta 1958 ja vuonna 2022 Tuukka Rauta 
+                        jatkaa yrityksen ohjaksissa Reino Raudan jäädessä eläkkeelle. Tuukka Rauta on toiminut yrityksessä 
+                        jo vuodesta 2000.  Vuonna 2021 yrityksessämme työskenteli 100 alan ammattilaista palvellen 
+                        asiakkaitamme rautaisella ammattitaidolla. 
+                    </p>
+
+                    <p>
+                        Yrityksemme ideana on alusta lähtien tarjota rakennus ja metallialan tuotteita ja palveluita 
+                        edulliseen hintaan. Palveluumme on aina kuulunut ammattitaitoinen opastus ja asiantuntemus, jota 
+                        asiakkaamme useiden sukupolvien ajan ovat hyödyntäneet projekteissaan. Voimmekin rehellisesti 
+                        sanoa, että tunnemme alan läpikotaisin ja tämän pitkän kokemuksen tuomalla varmuudella pystymme 
+                        tarjoamaan asiakkaillemme kaikki rauta ja metallialanpalvelut luotettavasti ja laadukkaasti - jo 
+                        vuodesta 1958.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Parallax 1 -->
+            <div class="row">
+                <div class="parallax1"></div>
+            </div>
+
+            <!-- Carousel -->
+            <div class="row">
+                <div id="demo" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <!-- <div id="demo" class="ps-0 carousel slide" data-bs-ride="carousel"> -->
+
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active bg-primary"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="1" class="bg-primary"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="2" class="bg-primary"></button>
+
+                        <!-- <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active border border-secondary"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="1" class="border border-secondary"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="2" class="border border-secondary"></button> -->
+                    </div>
+    
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner"> <!-- overflow-auto -->
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-lg-6 b">
+                                    <img src="assets/img/referenssi1.1.jpg">
+                                </div>
+
+                                <div class="col-lg-6 a">
+                                    <div class="row">
+                                        <h3>Referenssi 1: Suurhanke: Helsinki - Tallinna Silta / Valtakunnan Silta Oy</h3>
+                                        
+                                        <p>
+                                            Massiivinen, reippaan punainen Tallinnan silta avattiin liikenteelle tammikuussa 
+                                            2020. Siltahanke on yksi Suomen ja Viron suurimpia yhteisiä rakennushankkeita. 
+                                            Tähän merkittävään rakennushankkeeseen osallistuivat kaikki suurimmat 
+                                            rakennusyhtiöt ja toimijat Suomesta ja Virosta.  Ruosteinen Rauta Oy: toimitti 
+                                            kaikki sillan kaiteitten terärakenteiden tukevat pultit ja kaapelien suojaputket 
+                                            pääurakoitsija Valtakunnan Sillat Oy:lle. Pultti ja suojaputkitoimitukset saatiin 
+                                            toimitettua aikataulun mukaisesti.
+    
+                                            <br><br>
+                                            
+                                            Valtakunnan Sillat Oy valitsi Ruosteinen Rauta Oy:n pultti ja 
+                                            suojaputkitoimittajaksi aikaisemman yhteistyön perusteella luottaen, että hankkeen 
+                                            tiukassa aikataulussa pysytään, kun pultit ja suojaputkitoimituksissa on luotettava 
+                                            kumppani.
+    
+                                            <br><br>
+                                            
+                                            Seppo Silta kertookin yhteistyöstä ja toimituksista seuraavasti ”Ruosteinen Rauta 
+                                            yhtenä suurimpana rautakauppa ja metallialan toimittajana pystyy toimittamaan 
+                                            suuria määriä rakennustarvikkeita kriittisiin projekteihin. Yhteistyö Ruosteisen 
+                                            Raudan kanssa on toiminut aina hyvin ja tehokkaasti”. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-lg-6 b">
+                                    <img src="assets/img/referenssi2.1.webp">
+                                </div>
+                    
+                                <div class="col-lg-6 a">
+                                    <div class="row">
+                                        <h3>Referenssi 2: Konepalvelut vuokraus / Koneline Oy</h3>
+
+                                        <p>
+                                            Koneline Oy tarjoaa maansiirto ja maatyö palveluita rakentajille. Vuonna 2021 
+                                            KoneLine Oy luopui omista maansiirtokoneistaan ja käyttää urakoissaan Ruosteinen 
+                                            Rauta Oy:n vuokralaitevalikoimaa.
+
+                                            <br><br>
+                                            
+                                            ”Ruosteinen Rauta Oy” toimittaa meille projekteihin tarvittavia laitteistoja ja 
+                                            koneita. Koneet ja laitteet ovat aina toimivia ja hyvin huollettuja. Siirtyessämme 
+                                            vuokrakoneiden käyttöön, olemme pystyneet tarjoamaan maansiirtotöitä erittäin 
+                                            edulliseen hintaan asiakkaillemme. Vuokrakoneiden käytössä pystymme käyttämään ja 
+                                            saamaan käyttöömme juuri oikean laitteen oikeaan aikaan ja tämä luo liiketoimintaan 
+                                            kustannustehokkuutta. Ruosteinen Rauta on merkittävä kumppanimme, joka mahdollistaa 
+                                            toimintamme joustavuuden. Kannattavuutemme on kasvanut 89% kun siirryimme 
+                                            hyödyntämään Ruosteisen Raudan vuokrakonevalikoimaa toiminnassamme. ” Kertoo 
+                                            toimitusjohtaja Jorma Kontio Koneline Oy:stä. Koneline Oy suositteleekin Ruosteisen 
+                                            Raudan konevalikoimaan pienemmille ja suuremmille työmaille. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-lg-6 b">
+                                    <img src="assets/img/referenssi3.jpg">
+                                </div>
+                    
+                                <div class="col-lg-6 a">
+                                    <div class="row">
+                                        <h3>Referenssi 3: Talonrakentaja Olli Orava</h3>
+                                        <p>
+                                            Uniikki koti rakentui Poriin vuonna 2019. Rakentaja Jussi Ahola rakensi unelmiensa 
+                                            kodin hankkien kaikki rakennustarvikkeet Ruosteisen Raudan monipuolisesta 
+                                            valikoimasta. Ahola on 12 metriä korkea moniulotteinen rakennus, oikea taideteos, 
+                                            joka toteutettiin Arkkitehtitoimisto Ainutlaatuinen koti Oy:n suunnitelmien 
+                                            pohjalta.
+
+                                            <br><br>
+                        
+                                            Jussi Ahola kommentoi rakennusprojektiaan seuraavasti: ”Rakentaminen oli helppoa ja 
+                                            nopeaa Ruosteisen Raudan avulla. Monipuolinen valikoima mahdollisti kaikkien 
+                                            tarvikkeiden hankinnan yhdestä ja samasta paikasta, jolloin säästin kustannuksista 
+                                            ja sain aina kokonaisvaltaista palvelua kaikkiin rakentamiseen liittyviin 
+                                            kysymyksiin ja palveluihin liittyen. Suosittelen Ruosteisen Raudan valikoimaa 
+                                            lämpimästi kaikille rakentajille pieniin ja isoihin projekteihin.”
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parallax 2 -->
+            <div class="row">
+                <div class="parallax2"></div>
+            </div>
+
+            <!-- Palvelut -->
+            <div id="palvelut">
+                <div class="row accord accord-hide">
+                    <div class="col-lg-12">
+                        <h2 class="text-center">Palvelut</h2>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <h3>Rakennustarvikkeet</h3>
+
+                        <p>
+                            Ruosteinen Rauta tarjoaa rakennustarvikkeet alan johtavilta merkeiltä nopeasti toimitettuna suoraan 
+                            työmaalle. Ruosteisen Raudan Rakennustarvikkeet - palvelun avulla rakentaminen on helppoa ja 
+                            edullista. Laadukkuus ja edullisuus ovat ominaisuuksia, joita ostajat odottavat 
+                            rakennustarvikkeilta. Rakennustarvikkeet - valikoimasta löytyy paljon vaihtoehtoja pienempiin tai 
+                            isompiin rakennus- tai remontointiprojekteihin. 
+                        </p>
+
+                        <ul>
+                            <li>Perustustarvikkeet</li>
+                            <li>Rakennusmateriaalit</li>
+                            <li>Ilmanvaihto</li>
+                            <li>Lämmitys</li>
+                            <li>LVI</li>
+                            <li>Työkalut ja tarvikkeet</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <h3>Sisustustarvikkeet</h3>
+
+                        <p>
+                            Kun talo on rakennettu, voidaan keskittyä sisustamiseen. Me autamme sinua myös kaikissa 
+                            sisustamiseen liittyvissä ratkaisuissa. Valikoimaamme kuuluu kaikki sisustukseen tarvittavat 
+                            tuotteet ja ratkaisut, kuten keittiökalusteet, takat, tapetit, lattiapinnoitteet, laatat, koukut ja 
+                            maalit.
+                        </p>
+
+                        <ul>
+                            <li>Keittiö</li>
+                            <li>Kylpyhuone ja wc</li>
+                            <li>Laatat | lattialaatat, seinälaatat, kuviolaatat</li>
+                            <li>Lattiat | parketit, laminaatit, korkkilattiat, vinyylilattiat</li>
+                            <li>Ovet</li>
+                            <li>Kiukaat</li>
+                            <li>Tapetit</li>
+                            <li>Koukut naulakot ja hyllyt</li>
+                            <li>Takat</li>
+                            <li>Valaistus</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <h3>Piharakennus</h3>
+
+                        <p>
+                            Laajasta valikoimastamme löydät kaiken tarvittavan pihan suunnitteluun ja rakentamiseen.
+                        </p>
+
+                        <ul>
+                            <li>Pihakivetys ja päällysteet</li>
+                            <li>Puutarhakalusteet ja tarvikkeet</li>
+                            <li>Kylpytynnyrit ja uima-altaat</li>
+                            <li>Pihavalaisimet</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <h3>Konevuokraus</h3>
+
+                        <p>
+                            Vuokraamme laadukkaat ja turvalliset koneet erikokoisiin projekteihin yrityksille, 
+                            yhteistyökumppaneille ja yksityisille rakentajille ja remontoijille. Varaa ja tilaa tarvitsemasi 
+                            kone tai laite, kuljetamme koneen kohteeseen sovittuna ajankohtana. Esimerkkejä koneista ja 
+                            laitteistamme:
+                        </p>
+
+                        <ul>
+                            <li>Henkilönostimet</li>
+                            <li>Nosto- ja siirtokalusto</li>
+                            <li>Maantiivistyskalusto</li>
+                            <li>Peräkärryt</li>
+                            <li>Avant</li>
+                            <li>Generaattorit</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row accord accord-show">
+                    <div class="col-lg-12">
+                        <h2 class="text-center" id="palvelut">Palvelut</h2>
+                    </div>
+
+                    <div class="accordion accordion-flush" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <h3>Rakennustarvikkeet</h3>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>
+                                        Ruosteinen Rauta tarjoaa rakennustarvikkeet alan johtavilta merkeiltä nopeasti toimitettuna suoraan 
+                                        työmaalle. Ruosteisen Raudan Rakennustarvikkeet - palvelun avulla rakentaminen on helppoa ja 
+                                        edullista. Laadukkuus ja edullisuus ovat ominaisuuksia, joita ostajat odottavat 
+                                        rakennustarvikkeilta. Rakennustarvikkeet - valikoimasta löytyy paljon vaihtoehtoja pienempiin tai 
+                                        isompiin rakennus- tai remontointiprojekteihin. 
+                                    </p>
+                
+                                    <ul>
+                                        <li>Perustustarvikkeet</li>
+                                        <li>Rakennusmateriaalit</li>
+                                        <li>Ilmanvaihto</li>
+                                        <li>Lämmitys</li>
+                                        <li>LVI</li>
+                                        <li>Työkalut ja tarvikkeet</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <h3>Sisustustarvikkeet</h3>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>
+                                        Kun talo on rakennettu, voidaan keskittyä sisustamiseen. Me autamme sinua myös kaikissa 
+                                        sisustamiseen liittyvissä ratkaisuissa. Valikoimaamme kuuluu kaikki sisustukseen tarvittavat 
+                                        tuotteet ja ratkaisut, kuten keittiökalusteet, takat, tapetit, lattiapinnoitteet, laatat, koukut ja 
+                                        maalit.
+                                    </p>
+                
+                                    <ul>
+                                        <li>Keittiö</li>
+                                        <li>Kylpyhuone ja wc</li>
+                                        <li>Laatat | lattialaatat, seinälaatat, kuviolaatat</li>
+                                        <li>Lattiat | parketit, laminaatit, korkkilattiat, vinyylilattiat</li>
+                                        <li>Ovet</li>
+                                        <li>Kiukaat</li>
+                                        <li>Tapetit</li>
+                                        <li>Koukut naulakot ja hyllyt</li>
+                                        <li>Takat</li>
+                                        <li>Valaistus</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <h3>Piharakennus</h3>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>
+                                        Laajasta valikoimastamme löydät kaiken tarvittavan pihan suunnitteluun ja rakentamiseen.
+                                    </p>
+                
+                                    <ul>
+                                        <li>Pihakivetys ja päällysteet</li>
+                                        <li>Puutarhakalusteet ja tarvikkeet</li>
+                                        <li>Kylpytynnyrit ja uima-altaat</li>
+                                        <li>Pihavalaisimet</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <h3>Konevuokraus</h3>
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>
+                                        Vuokraamme laadukkaat ja turvalliset koneet erikokoisiin projekteihin yrityksille, 
+                                        yhteistyökumppaneille ja yksityisille rakentajille ja remontoijille. Varaa ja tilaa tarvitsemasi 
+                                        kone tai laite, kuljetamme koneen kohteeseen sovittuna ajankohtana. Esimerkkejä koneista ja 
+                                        laitteistamme:
+                                    </p>
+                
+                                    <ul>
+                                        <li>Henkilönostimet</li>
+                                        <li>Nosto- ja siirtokalusto</li>
+                                        <li>Maantiivistyskalusto</li>
+                                        <li>Peräkärryt</li>
+                                        <li>Avant</li>
+                                        <li>Generaattorit</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parallax 3 -->
+            <div class="row">
+                <div class="parallax3"></div>
+            </div>
+            
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>Ota yhteyttä</h2>
+                    </div>
+
+                    <div class="col-lg-6" id="b">
+                        <a class="navbar-brand col-lg-12" href="#">
+                            <img src="assets/img/logo/Logo dark.png" alt="Logo"> 
+                        </a>
+                    
+                        <p class="col-lg-12" id="osoite">
+                            Urheilutie 1,<br>
+                            28500 Pori<br>
+                            044 7011442<br>
+                            <a href="mailto:info@ruosteinenrauta.fi">info@ruosteinenrauta.fi</a>
+                        </p>
+                    </div>
+
+                    <div id="c">
+                        <p>
+                            Urheilutie 1,<br>
+                            28500 Pori<br>
+                            044 7011442<br>
+                            <a href="mailto:info@ruosteinenrauta.fi">info@ruosteinenrauta.fi</a>
+                        </p>
+                    </div>
+                    
+
+                    <div class="col-lg-6" id="a">
+                        <form action="palaute.php" name="palaute" method="post" id="palaute">
+                            <div class="pb-3">
+                                <input type="text" class="form-control" placeholder="etu ja sukunimi" name="nimi">
+                            </div>
+            
+                            <div class="pb-3">
+                                <input type="tel" class="form-control" placeholder="puhelinnumero" name="puh">
+                            </div>
+            
+                            <div class="pb-3">
+                                <input type="email" class="form-control" placeholder="sähköposti" name="email">
+                            </div>
+
+                            <div class="pb-3" id="laheta">
+                                <textarea class="form-control" rows="1" placeholder="viesti" name="viesti"></textarea>
+                            </div>
+            
+                            <div class="pb-3">
+                                <button type="submit" class="btn btn-primary" style="width: 100%;">Lähetä</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-lg-12" id="d">
+                        <p>Jarmo Vuorinen &copy; 2023</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

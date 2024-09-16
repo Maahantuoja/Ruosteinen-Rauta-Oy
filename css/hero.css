@@ -1,0 +1,127 @@
+#hero {
+    width: 100%;
+    height: 102vh;
+    background-color: black;
+    /* background: transparent; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -76px;
+    /* Luo herobannerin parallax efektin */
+    position: fixed;
+}
+
+/* Tarvitaan herobannerin row:n korkeuden säätämiseen */
+#hero-row {
+    min-height: 100vh;
+    /* min-height: 93vh; */
+    /* min-height: 85vh; */
+}
+
+#hero::after {
+    width: 100%;
+    height: inherit;
+    content: "";
+    position: absolute;
+    z-index: 10;
+    /* top: 0; */
+    /* top: 76px; */
+    left: 0;
+    /* background: rgba(0, 0, 0, 0.2); */
+    background: rgba(255, 255, 255, 0.05);
+    /* background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) */
+}
+
+#hero video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    object-fit: cover;
+}
+
+/* #hero .texture {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    z-index: 15;
+    background: url(../img/cross-stripes.png);
+} */
+
+#hero .caption {
+    position: relative;
+    z-index: 20;
+    text-align: center;
+}
+
+#hero .caption h1 {
+    font-size: 56px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: #086BA8;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+}
+
+#hero .caption .btn {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 75px;
+    color: white;
+    background-color: #AD4900;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    position: relative;
+    top: 80px;
+}
+
+#hero .caption button:hover {
+    background-color: #8F2B00;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+}
+
+#hero .caption button:active {
+    background-color: #AD4900;
+    color: white;
+}
+
+@media only screen and (max-width: 767.9px) {
+    #hero .caption h1 {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 697.9px) {
+    #hero .caption h1 {
+        font-size: 44px;
+    }
+}
+
+@media only screen and (max-width: 628.9px) {
+    #hero .caption h1 {
+        font-size: 38px;
+    }
+}
+
+@media only screen and (max-width: 558.9px) {
+    #hero .caption h1 {
+        font-size: 32px;
+    }
+}
+
+@media only screen and (max-device-width: 1366px) {
+    #hero {
+        margin-top: 0px;
+    }
+
+    #hero .caption h1 {
+        font-size: 32px;
+    }
+}

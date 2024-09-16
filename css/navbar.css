@@ -1,0 +1,92 @@
+@media only screen and (max-width: 637.9px) {
+    .nav-hide {
+        display: none;
+    }
+
+    #collapsibleNavbar {
+        padding: 0 20px 20px;
+    }
+
+    .navbar-brand {
+        margin: 0;
+    }
+
+    .navbar .navbar-brand img {
+        padding-left: 10px;
+    }
+}
+
+@media only screen and (min-width: 638px) {
+    .nav-show {
+        display: none;
+    }
+
+    #collapsibleNavbar {
+        padding: 0px 20px 0px;
+    }
+
+    .navbar .navbar-brand img {
+        padding-left: 10px;
+    }
+}
+
+.navbar {
+    width: 100%;
+    padding: 0;
+    z-index: 30;
+    background-color: #FFF9F5;
+    /* opacity: 0.3; */
+}
+
+.nav-link {
+    /* color: #054065; */
+    color: #086BA8;
+}
+
+#collapsibleNavbar ul {
+    padding-right: 10px;
+}
+
+button.navbar-toggler {
+    margin-right: 20px;
+    margin-left: 12px;
+}
+
+label {
+    color: #054065;
+    opacity: 0.9;
+}
+
+/* Huolehtii ettei scrollbar katoa kun avaa modalin(kirjautumisen) */
+.modal-open {
+    padding-right: 0 !important;
+}
+html {
+    overflow-y: scroll !important;
+}
+
+/* Mobiili */
+@media only screen and (max-device-width: 1366px) {
+    .navbar .navbar-brand img {
+        padding-left: 0px;
+    }
+
+    header button.navbar-toggler {
+        position: sticky;
+        right: 10px;
+        margin: 0;
+        /* margin-right: 4px; */
+    }
+
+    #collapsibleNavbar {
+        padding: 0px 12px 10px;
+    }
+}
+
+@media only screen and (max-device-width: 355px) {
+    header button.navbar-toggler {
+        position: relative;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+}

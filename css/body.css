@@ -1,0 +1,67 @@
+body, html {
+    /* height: 100%; */
+    font-family: "Barlow", Arial, Helvetica, sans-serif;
+    background-color: #FFF9F5;
+    /* margin: 0; */
+    /* padding: 0; */
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+}
+
+.bg {
+    /* z-index: 0; */
+    background: #FFF9F5;
+    position: relative;
+    /* opacity: 0.2; */
+}
+
+.rowPadding {
+    padding: 0px 50px 50px 50px;
+}
+
+.myColPadding {
+    padding: 0px 50px 0px 50px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #086BA8;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 20px;
+    color: #086BA8;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    color: #086BA8;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #086BA8;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #054065;
+}
+
+li {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #054065;
+}

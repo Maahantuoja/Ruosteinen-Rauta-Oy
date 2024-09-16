@@ -1,0 +1,55 @@
+@media only screen and (max-width: 991.9px) {
+    .accord {
+        padding: 0px 10px 10px;
+    }
+
+    .accord-hide {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .accord {
+        padding: 0px 50px 60px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .accord-show {
+        display: none;
+    }
+}
+
+.accord {
+    background: #FFF9F5;
+    position: relative;
+}
+
+.accord h2 {
+    margin: 0;
+    padding: 40px 0px;
+}
+
+h2.accordion-header {
+    padding: 0;
+}
+
+.accord .col-lg-3 {
+    max-width: 400px;
+    background-color: white;
+    padding-bottom: 20px;
+    border-style: solid;
+    border-color: #FFF9F5;
+    border-width: 0px 5px 5px 5px;
+}
+
+button.accordion-button h3 {
+    color: #086BA8;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.accordion-button:after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23086BA8'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}

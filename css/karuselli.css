@@ -1,0 +1,112 @@
+@media only screen and (min-width: 992px) {
+    .carousel .a {
+        padding: 0px 100px 0px;
+    }
+
+    .carousel .b {
+        padding: 0;
+    }
+
+    .carousel-item .row {
+        /* overflow-y: auto; */
+        /* overflow-x: hidden; */
+        /* height: 75vh; */
+        height: 810px;
+    }
+
+    .carousel img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    .carousel h3 {
+        display: flex;
+        align-items: flex-end;
+        padding-top: 0;
+    }
+
+    .carousel p {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 991.9px) {
+    .carousel {
+        margin: 0;
+        padding: 20px 10px 10px;
+        /* height: 100vh; */
+        /* height: 846px; */
+    }
+
+    .carousel .a {
+        display: flex;
+        align-items: center;
+        /* min-height: 280px; */
+        height: 504px;
+    }
+
+    .carousel .b {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .carousel .row {
+        margin: 0;
+        padding: 0;
+    }
+
+    .carousel-item img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .carousel h3 {
+        margin: 0;
+        padding: 0 0 13px 0;
+    }
+
+    .carousel p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.carousel {
+    position: relative;
+    background-color: white;
+}
+
+@media only screen and (max-device-width: 430px) {
+    .carousel-item .a {
+        height: 571px;
+    }
+}
+
+@media only screen and (max-device-width: 400px) {
+    .carousel-item .a {
+        height: 616px;
+    }
+}
+
+@media only screen and (max-device-width: 360px) {
+    .carousel-item .a {
+        height: 660px;
+    }
+}
+
+@media only screen and (max-device-width: 320px) {
+    .carousel-item .a {
+        height: 727px;
+    }
+}
+
+@media only screen and (max-device-width: 280px) {
+    .carousel-item .a {
+        height: 861px;
+    }
+}

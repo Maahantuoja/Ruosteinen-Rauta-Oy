@@ -1,0 +1,50 @@
+@media only screen and (min-width: 992px) {
+    .meista {
+        /* height: 1075px; */
+        padding: 0px 50px 50px;
+    }
+
+    .meista .col-lg-6 {
+        padding: 0px 50px;
+    }
+
+    .meista .col-lg-6 img {
+        display: flex;
+        object-fit: cover;
+        /* height: 400px; */
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 991.9px) {
+    .meista {
+        padding: 0px 10px 10px;
+    }
+
+    .meista h3 {
+        margin-top: -15px;
+    }
+
+    .meista .col-lg-6 img {
+        width: 100%;
+    }
+
+    .a {order: 1;}
+    .b {order: 2;}
+}
+
+.meista {
+    background: #FFF9F5;
+    position: relative;
+}
+
+.meista h3 {
+    padding-top: 50px;
+}
+
+@media only screen and (max-device-width: 425px) {
+    .meista h3 {
+        padding-top: 50px;
+    }
+}
